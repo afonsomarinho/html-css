@@ -14,7 +14,7 @@
             width: 600px;
         }
 
-        td {
+        td, th {
             border: 1px solid black;
             text-align: center;
             padding: 10px;
@@ -35,14 +35,22 @@
 <body>
     <h1>Exercicio 024</h1>
     <table>
-        <caption>Grupo de Homens e Mulheres e filmes favoritos</caption>
+        <caption>Homens e Mulheres e filmes favoritos</caption>
+        <thead>
+            <tr>
+                <td scope="col" class="negrito" >Grupo</td>
+                <td scope="col" class="negrito">Nomes</td>
+                <td colspan="3" scope="colgroup" class="negrito">Filmes</td>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th colspan="4" scope="row">Total</th>
+                <td>1000</td>
+            </tr>
+        </tfoot>
         <tr>
-            <td class="negrito">Grupo</td>
-            <td class="negrito">Nomes</td>
-            <td colspan="3" class="negrito">Filmes</td>
-        </tr>
-        <tr>
-            <td rowspan="3" class="negrito">Mulheres</td>
+            <td rowspan="3" scope="rowgroup" class="negrito">Mulheres</td>
             <td>Ana Maria Santos</td>
             <td>Alien</td>
             <td>Rambo</td>
@@ -61,7 +69,7 @@
             <td>Big Hero</td>
         </tr>
         <tr>
-            <td rowspan="3" class="negrito">Homens</td>
+            <td rowspan="3" scope="rowgroup" class="negrito">Homens</td>
             <td>Bruno Mendonca</td>
             <td>Intocaveis</td>
             <td>Amnesia</td>
